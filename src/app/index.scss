@@ -30,31 +30,11 @@ md-toolbar.md-default-theme {
   background-color: black;
 }
 
-section.jumbotron {
-  margin-bottom: 30px;
-  padding: 1px 30px;
-  background-color: #5aadbb;
-  text-align: center;
-
-  color: white;
-
-  h1 {
-    font-size: 3em;
-  }
+.jumbotron {
+    background: linear-gradient(rgba(20,230,28,0.3), rgba(20,28,230,0.3)), url('https://s-media-cache-ak0.pinimg.com/originals/b8/31/3a/b8313a7a99c24ead0308a44dfd326d79.jpg') no-repeat;
 }
-
 .techs {
-  display: flex;
   flex-flow: row wrap;
-
-  md-card {
-    width: 30%;
-
-    img.pull-right {
-      float: right;
-      width: 50px;
-    }
-  }
 }
 
 .category {
@@ -75,6 +55,32 @@ section.jumbotron {
 .title {
     display: none;
 }
+
+.fa-twitter, .fa-facebook, .fa-instagram {
+    padding-top: 15%;
+    font-size: 25pt;
+}
+
+md-button:not([disabled]).md-fab:hover {
+    transform: none;
+}
+
+md-button#fb-btn.md-default-theme.md-fab {
+    background-color: #3F51B5;
+}
+
+md-button#fb-btn.md-default-theme.md-fab:not([disabled]):hover {
+    background-color: #3F51B5;
+}
+
+md-button#insta.md-default-theme.md-fab {
+    background-color: #388E3C;
+}
+
+md-button#insta.md-default-theme.md-fab:not([disabled]):hover {
+    background-color: #388E3C;
+}
+
 
 @media (min-width: 768px) {
   .title {

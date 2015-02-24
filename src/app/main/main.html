@@ -3,12 +3,14 @@
   <header ng-include="'components/navbar/navbar.html'"></header>
 
   <md-content>
-    <section class="header jumbotron">
-        <h1>Trending <small class="fa fa-line-chart"></small></h1>
-        <img src="http://www.designsnext.com/wp-content/uploads/2014/09/Hipster-Gif.gif" alt="BRO!" layout-align="center end">
-    </section>
-    <div class="techs" layout-align="center">
-      <md-card ng-repeat="product in main.trending | startFrom:main.currentPage*main.pageSize | limitTo:main.pageSize">
+    <header class="header jumbotron" layout="row" layout-align="center">
+       <div layout="column">
+        <h1 flex="50">Trending <small class="fa fa-line-chart"></small></h1>
+        <img flex src="http://www.designsnext.com/wp-content/uploads/2014/09/Hipster-Gif.gif" alt="BRO!" >
+       </div>
+    </header>
+    <div class="techs" layout="row" layout-align="center">
+      <md-card ng-repeat="product in main.trending | startFrom:main.currentPage*main.pageSize | limitTo:main.pageSize" flex="80" flex-md="40" flex-lg="30">
        <a ng-href="{{product.url}}" class="listing">
         <div>
           <img layout="row" layout-align="space-around center" flex="80" ng-src="{{product.MainImage.url_570xN}}" class="product-image" alt="image missing">
@@ -24,20 +26,28 @@
         </a>
       </md-card>
     </div>
-    <section layout="row" layout-align="center end">    
-          <md-button ng-disabled="main.currentPage == 0" ng-click="main.currentPage=main.currentPage-1" class="md-fab">
+    <section layout="row" layout-align="center center">    
+          <md-button ng-disabled="main.currentPage == 0" ng-click="main.currentPage=main.currentPage-1" class="md-raised">
             Prev
           </md-button>
           <p>{{main.currentPage+1}} of {{main.numPages()}}</p>
-          <md-button ng-disabled="main.currentPage >= main.numPages()-1" ng-click="main.currentPage=main.currentPage+1" class="md-fab">
+          <md-button ng-disabled="main.currentPage >= main.numPages()-1" ng-click="main.currentPage=main.currentPage+1" class="md-raised">
             Next
           </md-button>
       </section> 
   </md-content>
 
   <footer>
-    <md-toolbar layout="row" layout-align="center center">
-      <p>With ♥ from <a href="https://twitter.com/Swiip">@Swiip</a></p>
+    <md-toolbar layout="row" layout-align="end center">
+      <md-button class="md-fab md-primary" href="https://twitter.com/rxnerd">
+          <span class="fa fa-twitter" layout-align="center center"></span>
+      </md-button>
+      <md-button id="fb-btn" class="md-fab" href="https://twitter.com/rxnerd">
+          <span class="fa fa-facebook" layout-align="center center"></span>
+      </md-button>
+      <md-button id="insta" class="md-fab" href="https://twitter.com/rxnerd">
+          <span class="fa fa-instagram" layout-align="center center"></span>
+      </md-button>
     </md-toolbar>
   </footer>
 
