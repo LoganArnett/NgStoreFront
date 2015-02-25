@@ -1,6 +1,6 @@
-<header ng-include="'components/navbar/navbar.html'"></header>
+<header ng-include="'components/navbar/change-head.html'" class="view-change"></header>
 
- <div class="techs" layout="row" layout-align="center" >
+<div class="techs" layout="row" layout-align="center" >
   <md-card ng-repeat="product in main.trending | startFrom:main.currentPage*main.pageSize | limitTo:main.pageSize" flex-sm="75" layout-margin class="product-list">
    <a ng-href="{{product.url}}" class="listing">
     <div layout="row" layout-align="space-between center">

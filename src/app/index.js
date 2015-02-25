@@ -17,7 +17,18 @@ angular.module('ngStoreFront', ['ngAnimate', 'ngCookies', 'ngTouch', 'restangula
              }
         }
       })
-      .state('grid', {
+      .state('products', {
+        url: '/products',
+        templateUrl: 'app/change/product.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main',
+        resolve: {
+            trending: function(Restangular){
+                    return Restangular.one('app/listings/trending.json').get();
+             }
+        }
+    })
+      .state('products.grid', {
         url: '/grid',
         templateUrl: 'app/change/product-grid.html',
         controller: 'MainCtrl',
@@ -28,8 +39,8 @@ angular.module('ngStoreFront', ['ngAnimate', 'ngCookies', 'ngTouch', 'restangula
              }
         }
       })
-      .state('listings', {
-        url: '/listings',
+      .state('products.list', {
+        url: '/list',
         templateUrl: 'app/change/product-list.html',
         controller: 'MainCtrl',
         controllerAs: 'main',

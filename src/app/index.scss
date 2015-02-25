@@ -86,6 +86,35 @@ md-toolbar.md-default-theme {
     font-size: 25pt;
 }
 
+.product-views {
+    width: 80%;
+    height: auto;
+    margin: 3% auto;
+    border: 2px solid #3F51B5;
+}
+
+.view-change {
+    width: 95%;
+    border-bottom: 2px solid #3F51B5;
+    margin: $center;
+    margin-bottom: 3%;
+}
+
+.view-btns {
+    font-size: 25pt;
+    md-button {
+        color: gray;
+    }
+    md-button:not([disabled]):hover, md-button.md-default-theme:not([disabled]).focus  {
+        background: transparent;
+        transform: none;
+        color: #03A9F4;
+    }
+    md-button:active {
+        color: #03A9F4;
+    }
+}
+
 md-button:not([disabled]).md-fab:hover {
     transform: none;
 }
