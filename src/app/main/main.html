@@ -15,7 +15,7 @@
         <div>
           <img layout="row" layout-align="space-around center" flex="80" ng-src="{{product.MainImage.url_570xN}}" class="product-image" alt="image missing">
           <div layout="row" layout-align="space-around center" class="caption">
-            <h3 flex="70" class="title"> {{product.title}} </h3>
+            <h3 flex="70" class="title"> {{product.title | limitTo: 20}} </h3>
             <p flex="20"> <strong>{{product.price | currency}}</strong></p>
           </div>
         </div>
