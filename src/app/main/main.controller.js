@@ -7,10 +7,10 @@ angular.module('ngStoreFront')
             return input.slice(start);
     }
   })
-  .controller('MainCtrl', function (Restangular, trending) {
-    this.results = trending;
-    this.trending = this.results.results;
-    console.log(this.trending);
+  .controller('MainCtrl', function (trending) {
+    var self = this;
+    
+    this.trending = trending.results
     
     //Pagination setup
      this.currentPage = 0;

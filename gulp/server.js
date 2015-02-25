@@ -30,6 +30,14 @@ function browserSyncInit(baseDir, files, browser) {
 
 }
 
+// var config = {
+//   https: true
+// };
+//
+// browserSync(config);
+
+
+
 gulp.task('serve', ['watch'], function () {
   browserSyncInit([
     '.tmp',
