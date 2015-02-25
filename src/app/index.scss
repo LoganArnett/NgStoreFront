@@ -58,6 +58,12 @@ md-toolbar.md-default-theme {
     height: 18vh;
 }
 
+.grid-product-image {
+    display: block;
+    width: 50%;
+    margin: $center;
+}
+
 .listing {
     color: #323232;
     text-decoration: none;
@@ -65,6 +71,10 @@ md-toolbar.md-default-theme {
 
 .product-list {
     height: 20vh;
+}
+
+.price, .title-grid {
+    text-align: center;
 }
 
 .title {

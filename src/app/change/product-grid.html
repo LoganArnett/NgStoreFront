@@ -1,16 +1,14 @@
 <header ng-include="'components/navbar/navbar.html'"></header>
 
  <div class="techs" layout="row" layout-align="center">
-  <md-card ng-repeat="product in main.trending | startFrom:main.currentPage*main.pageSize | limitTo:main.pageSize" flex="80" flex-md="40" flex-lg="30">
-   <a ng-href="{{product.url}}" class="listing">
-    <div>
-      <img layout="row" layout-align="space-around center" flex="80" ng-src="{{product.MainImage.url_570xN}}" class="product-image" alt="image missing">
-      <div layout="row" layout-align="space-around center" class="caption">
-        <h3 flex="70" class="title"> {{product.title}} </h3>
-        <p flex="20"> <strong>{{product.price | currency}}</strong></p>
-      </div>
-    </div>
-   </a>
+  <md-card ng-repeat="product in main.trending | startFrom:main.currentPage*main.pageSize | limitTo:main.pageSize" flex="80" flex-md="40" flex-lg="25">
+  <div layout="column" layout-align="space-between center">
+     <a ng-href="{{product.url}}" class="listing">
+      <img ng-src="{{product.MainImage.url_170x135}}" class="grid-product-image" alt="image missing">
+        <p class="price"> <strong>{{product.price | currency}}</strong></p>
+        <p class="title-grid"> {{product.title}} </p>
+     </a>
+   </div>
   </md-card>
 </div>
 <section layout="row" layout-align="center center">    
