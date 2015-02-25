@@ -4,8 +4,8 @@
 
   <md-content>
     <header class="header jumbotron" layout="row" layout-align="center">
-       <div layout="column">
-        <h1 flex="50">Trending <small class="fa fa-line-chart"></small></h1>
+       <div>
+        <h1>Trending <small class="fa fa-line-chart"></small></h1>
         <img flex src="http://www.designsnext.com/wp-content/uploads/2014/09/Hipster-Gif.gif" alt="BRO!" >
        </div>
     </header>
@@ -17,13 +17,9 @@
           <div layout="row" layout-align="space-around center" class="caption">
             <h3 flex="70" class="title"> {{product.title}} </h3>
             <p flex="20"> <strong>{{product.price | currency}}</strong></p>
-<!--
-            <p> {{product.description}} </p>
-            <p><a ng-href="{{product.url}}">{{product.url}}</a></p>
--->
           </div>
         </div>
-        </a>
+       </a>
       </md-card>
     </div>
     <section layout="row" layout-align="center center">    
@@ -34,7 +30,7 @@
           <md-button ng-disabled="main.currentPage >= main.numPages()-1" ng-click="main.currentPage=main.currentPage+1" class="md-raised">
             Next
           </md-button>
-      </section> 
+    </section> 
   </md-content>
 
   <footer>

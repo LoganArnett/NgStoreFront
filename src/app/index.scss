@@ -31,7 +31,13 @@ md-toolbar.md-default-theme {
 }
 
 .jumbotron {
-    background: linear-gradient(rgba(20,230,28,0.3), rgba(20,28,230,0.3)), url('https://s-media-cache-ak0.pinimg.com/originals/b8/31/3a/b8313a7a99c24ead0308a44dfd326d79.jpg') no-repeat;
+    background: linear-gradient(rgba(20,230,28,0.8), rgba(20,28,230,0.3)), url('https://s-media-cache-ak0.pinimg.com/originals/b8/31/3a/b8313a7a99c24ead0308a44dfd326d79.jpg') no-repeat;
+    
+        h1 {
+            text-align: center;
+            color: white;
+        }
+    
 }
 .techs {
   flex-flow: row wrap;
@@ -47,9 +53,18 @@ md-toolbar.md-default-theme {
     height: 220px;
 }
 
+.small-product-image {
+    width: auto;
+    height: 18vh;
+}
+
 .listing {
     color: #323232;
     text-decoration: none;
+}
+
+.product-list {
+    height: 20vh;
 }
 
 .title {
