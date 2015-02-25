@@ -17,71 +17,71 @@ angular.module('ngStoreFront', ['ngAnimate', 'ngCookies', 'ngTouch', 'restangula
       .state('home', {
         url: '/',
         templateUrl: 'app/main/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main',
-        resolve: {
-            trending: function(Restangular){
-                Restangular.setJsonp(true);
-                Restangular.setRequestSuffix('.js');
-                
-                    return Restangular        
-                        .one('listings/trending').get({
-                            fields: 'url,title,description,price', limit: 100, includes: "MainImage"
-                        });
-             }
-        }
+//        controller: 'MainCtrl',
+//        controllerAs: 'main',
+//        resolve: {
+//            trending: function(Restangular){
+//                Restangular.setJsonp(true);
+//                Restangular.setRequestSuffix('.js');
+//                
+//                    return Restangular        
+//                        .one('listings/trending').get({
+//                            fields: 'url,title,description,price', limit: 100, includes: "MainImage"
+//                        });
+//             }
+//        }
       })
       .state('products', {
         url: '/products',
         templateUrl: 'app/change/product.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main',
-        resolve: {
-            trending: function(Restangular){
-                Restangular.setJsonp(true);
-                Restangular.setRequestSuffix('.js');
-                
-                    return Restangular        
-                        .one('listings/trending').get({
-                            fields: 'url,title,description,price', limit: 100, includes: "MainImage"
-                        });
-             }
-        }
+//        controller: 'MainCtrl',
+//        controllerAs: 'main',
+//        resolve: {
+//            trending: function(Restangular){
+//                Restangular.setJsonp(true);
+//                Restangular.setRequestSuffix('.js');
+//                
+//                    return Restangular        
+//                        .one('listings/trending').get({
+//                            fields: 'url,title,description,price', limit: 100, includes: "MainImage"
+//                        });
+//             }
+//        }
     })
       .state('products.grid', {
         url: '/grid',
         templateUrl: 'app/change/product-grid.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main',
-        resolve: {
-            trending: function(Restangular){
-                Restangular.setJsonp(true);
-                Restangular.setRequestSuffix('.js');
-                
-                    return Restangular        
-                        .one('listings/trending').get({
-                            fields: 'url,title,description,price', limit: 100, includes: "MainImage"
-                        });
-             }
-        }
+//        controller: 'MainCtrl',
+//        controllerAs: 'main',
+//        resolve: {
+//            trending: function(Restangular){
+//                Restangular.setJsonp(true);
+//                Restangular.setRequestSuffix('.js');
+//                
+//                    return Restangular        
+//                        .one('listings/trending').get({
+//                            fields: 'url,title,description,price', limit: 100, includes: "MainImage"
+//                        });
+//             }
+//        }
 
       })
       .state('products.list', {
         url: '/list',
         templateUrl: 'app/change/product-list.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main',
-        resolve: {
-            trending: function(Restangular){
-                Restangular.setJsonp(true);
-                Restangular.setRequestSuffix('.js');
-                
-                    return Restangular        
-                        .one('listings/trending').get({
-                            fields: 'url,title,description,price', limit: 100, includes: "MainImage"
-                        });
-             }
-        }
+//        controller: 'MainCtrl',
+//        controllerAs: 'main',
+//        resolve: {
+//            trending: function(Restangular){
+//                Restangular.setJsonp(true);
+//                Restangular.setRequestSuffix('.js');
+//                
+//                    return Restangular        
+//                        .one('listings/trending').get({
+//                            fields: 'url,title,description,price', limit: 100, includes: "MainImage"
+//                        });
+//             }
+//        }
 
       });
       

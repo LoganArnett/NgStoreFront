@@ -6,7 +6,7 @@
     <div layout="row" layout-align="space-between center">
       <img flex="20" ng-src="{{product.MainImage.url_570xN}}" class="small-product-image" alt="image missing">
         <p flex="10"><strong>{{product.price | currency}}</strong></p>
-        <p flex="30">{{product.title}}</p>
+        <p flex="30">{{product.title | limitTo: 25 }}</p>
         <md-button class="md-raised md-primary">
             <span class="fa fa-plus">Add to Cart</span>
         </md-button>
