@@ -8,7 +8,7 @@ angular.module('ngStoreFront')
         }
     })
 
-    .factory('Listangular', function(Restangular) {
+    .factory('Trendangular', function(Restangular) {
         Restangular.setJsonp(true);
                 Restangular.setRequestSuffix('.js');
                     return Restangular        
@@ -17,12 +17,14 @@ angular.module('ngStoreFront')
                         });
     })
     
-  .controller('MainCtrl', function (Listangular) {
+  .controller('MainCtrl', function (Trendangular) {
         var self = this;
-        this.trending;
-        Listangular.then(function(trends){
+        
+        console.log(Trendangular);
+        Trendangular.then(function(trends){
             self.trending = trends.results;
         })
+
         
         //Pagination setup
          this.currentPage = 0;
